@@ -1,279 +1,141 @@
-# Automotive Cybersecurity Protection System
+# War & Current Affairs Dashboard - GitHub Projects API Setup
 
-A comprehensive Linux-based security framework for protecting vehicle systems from cyber attacks, implementing defense-in-depth architecture with hardware security, encrypted communications, intrusion detection, and anomaly monitoring.Protecting vehicle systems from cyber attacks requires implementing a comprehensive, multi-layered security architecture combining hardware security (Secure Boot, TPM), cryptographic protection (AES-256, TLS 1.3), network defense (firewalls, IDS), intelligent anomaly detection, and rigorous compliance with ISO/SAE 21434 and UNECE WP.29 standards. The automotive industry has evolved from treating cybersecurity as an afterthought to embedding it as a core design principle from the earliest concept phase through vehicle decommissioning. As vehicles become more connected and autonomous, the importance of robust cybersecurity only increases. Manufacturers must maintain a proactive security posture through continuous vulnerability management, real-time threat monitoring, rapid incident response, and ongoing security updates throughout each vehicle's operational life. By implementing the best practices outlined in this guide—combining secure coding, cryptographic protection, hardware security, network defense, anomaly detection, and comprehensive monitoring—automotive manufacturers can effectively protect their customers and ensure the safety and integrity of modern vehicles.
+## 🎯 Overview
 
-This project provides practical implementations and guidelines for securing automotive systems against cyber threats. It covers:
+This is a comprehensive **GitHub Projects-based dashboard** for tracking global conflicts, geopolitical developments, military operations, humanitarian crises, peace negotiations, and real-time current affairs data with verified sources.
 
-- **Secure Boot Implementation** with TPM integration
-- **CAN Bus Security** with intrusion detection
-- **Encrypted Communication** using AES-256 and TLS 1.3
-- **Anomaly Detection** using machine learning
-- **OTA Update Security** with A/B partitioning
-- **Compliance** with ISO/SAE 21434 and UNECE WP.29
+## 📦 What's Included
 
-## 🎯 Features
+- **`create_war_dashboard_project.py`** - Python script to automate project creation via GitHub API
+- **`war-dashboard-api-config.json`** - Configuration file with all dashboard specifications
+- **`WAR_DASHBOARD_SETUP.md`** - Comprehensive setup and implementation guide
+- **`requirements.txt`** - Python dependencies
+- **`setup.sh`** - Automated setup script for macOS/Linux
+- **`setup.bat`** - Automated setup script for Windows
+- **`.env.example`** - Environment variables template
 
-- ✅ Multi-layer defense architecture
-- ✅ Real-time CAN bus monitoring and filtering
-- ✅ Cryptographic message authentication
-- ✅ Hardware-based secure boot
-- ✅ ML-based anomaly detection
-- ✅ Secure OTA update system
-- ✅ Comprehensive logging and alerting
+## ⚡ Quick Start (Choose One)
 
-## 📋 Requirements
+### Option 1: Automated Setup (Easiest)
 
-### Hardware
-- Linux-compatible embedded system (ARM/x86_64)
-- TPM 2.0 module (discrete or integrated)
-- CAN bus interface (SocketCAN compatible)
-- Minimum 512MB RAM, 4GB storage
-
-### Software
-- Linux Kernel 4.19+ with SocketCAN support
-- Python 3.8+
-- OpenSSL 1.1.1+
-- can-utils package
-
-### Python Dependencies
+**macOS/Linux:**
 ```bash
-pip install -r requirements.txt
+chmod +x setup.sh
+./setup.sh
 ```
 
-## 🚀 Quick Start
-
-### 1. Clone the Repository
+**Windows:**
 ```bash
-git clone https://github.com/yourusername/automotive-cybersecurity.git
-cd automotive-cybersecurity
+setup.bat
 ```
 
-### 2. Install Dependencies
-```bash
-sudo apt-get update
-sudo apt-get install can-utils openssl python3-pip
-pip3 install -r requirements.txt
-```
+### Option 2: Manual Setup
 
-### 3. Configure System
-```bash
-# Edit configuration file
-cp config/security_config.yaml.example config/security_config.yaml
-nano config/security_config.yaml
-```
+1. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### 4. Run Security System
-```bash
-# Start the main security daemon
-sudo python3 src/main.py --config config/security_config.yaml
-```
+2. **Generate GitHub Token:**
+   - Go to https://github.com/settings/tokens
+   - Create token with `repo` and `project` scopes
+   - Copy the token
 
-## 📁 Project Structure
+3. **Set environment variable:**
+   ```bash
+   export GITHUB_TOKEN='your_token_here'
+   ```
 
-```
-automotive-cybersecurity/
-├── src/
-│   ├── main.py                      # Main security daemon
-│   ├── secure_boot/
-│   │   ├── verify_signatures.py     # Boot signature verification
-│   │   └── tpm_manager.py           # TPM integration
-│   ├── can_security/
-│   │   ├── can_monitor.py           # CAN bus monitoring
-│   │   ├── ids_system.py            # Intrusion detection
-│   │   └── message_filter.py        # Message filtering
-│   ├── crypto/
-│   │   ├── encryption.py            # AES-256 encryption
-│   │   ├── signatures.py            # Digital signatures
-│   │   └── key_manager.py           # Key management
-│   ├── anomaly_detection/
-│   │   ├── ml_detector.py           # ML-based detection
-│   │   └── train_model.py           # Model training
-│   ├── ota_security/
-│   │   ├── update_validator.py      # Update verification
-│   │   └── partition_manager.py     # A/B partitioning
-│   └── utils/
-│       ├── logger.py                # Logging system
-│       └── alerts.py                # Alert manager
-├── config/
-│   ├── security_config.yaml.example # Configuration template
-│   └── can_whitelist.json           # Allowed CAN messages
-├── tests/
-│   ├── test_can_security.py
-│   ├── test_crypto.py
-│   └── test_anomaly_detection.py
-├── docs/
-│   ├── ARCHITECTURE.md              # System architecture
-│   ├── SECURITY_GUIDE.md            # Comprehensive security guide
-│   └── API_REFERENCE.md             # API documentation
-├── scripts/
-│   ├── setup_can.sh                 # CAN interface setup
-│   ├── generate_keys.sh             # Key generation
-│   └── simulate_attack.sh           # Testing script
-├── .github/
-│   └── workflows/
-│       └── security-scan.yml        # GitHub Actions CI/CD
-├── LICENSE
-├── README.md
-├── requirements.txt
-└── .gitignore
-```
+4. **Run the script:**
+   ```bash
+   python3 create_war_dashboard_project.py
+   ```
 
-## 🔧 Configuration
+## 📊 Dashboard Features
 
-Edit `config/security_config.yaml`:
+### 8 Main Tracking Sections
 
-```yaml
-system:
-  name: "Vehicle Security System"
-  log_level: INFO
+1. **Active Conflicts & War Zones** - Global conflict monitoring
+2. **Military Operations & Tactics** - Military action tracking
+3. **Humanitarian Crisis Data** - Crisis response and aid
+4. **Geopolitical Developments** - International relations
+5. **Peace Negotiations & Treaties** - Peace efforts
+6. **International Response & Sanctions** - Global response measures
+7. **Real-time Current Affairs** - Breaking news and developments
+8. **Data & Statistics** - Verified metrics and statistics
 
-can_bus:
-  interface: "can0"
-  bitrate: 500000
-  enable_filtering: true
-  whitelist: "config/can_whitelist.json"
+### Data Sources
 
-encryption:
-  algorithm: "AES-256-GCM"
-  key_storage: "/etc/vehicle/keys"
+- UN Official Reports
+- Red Cross/Red Crescent
+- Reuters & AP News
+- BBC News
+- Government Official Statements
+- International Criminal Court
+- Human Rights Watch
+- OCHA & SIPRI
 
-tpm:
-  enabled: true
-  device: "/dev/tpm0"
-  pcr_banks: [0, 1, 2, 3, 7]
+## ✅ Accuracy Standards
 
-intrusion_detection:
-  enabled: true
-  ml_model: "models/anomaly_detector.pkl"
-  threshold: 0.85
+- **Cross-verification**: Minimum 2 reliable sources per claim
+- **Timestamps**: All information dated and timestamped
+- **Attribution**: Full source citations
+- **Distinction**: Clear separation of confirmed vs. unconfirmed reports
+- **Update Frequency**: Critical events within 24 hours
 
-alerts:
-  email_enabled: false
-  syslog_enabled: true
-  webhook_url: ""
-```
+## 📋 File Descriptions
 
-## 🛡️ Security Layers
+| File | Purpose |
+|------|----------|
+| `create_war_dashboard_project.py` | Main automation script |
+| `war-dashboard-api-config.json` | Project configuration |
+| `WAR_DASHBOARD_SETUP.md` | Complete setup guide |
+| `requirements.txt` | Python dependencies |
+| `setup.sh` | Linux/macOS setup |
+| `setup.bat` | Windows setup |
+| `.env.example` | Environment template |
 
-### 1. Hardware Security
-- Secure Boot with chain of trust
-- TPM 2.0 for key storage
-- Physical tamper detection
+## 🔧 API Endpoints Used
 
-### 2. Communication Security
-- AES-256-GCM encryption
-- TLS 1.3 for external communications
-- Certificate pinning
+- `POST /repos/{owner}/{repo}/projects` - Create project
+- `POST /projects/{project_id}/columns` - Create columns
+- `POST /repos/{owner}/{repo}/issues` - Create tracking issues
+- `POST /projects/columns/{column_id}/cards` - Add cards to columns
 
-### 3. Network Security
-- CAN bus message filtering
-- Real-time intrusion detection
-- Rate limiting and DoS protection
+## 🛡️ Security Notes
 
-### 4. Application Security
-- Input validation
-- Access control
-- Anomaly detection
+- ⚠️ Never commit `.env` file with real tokens
+- Use `export GITHUB_TOKEN=...` or `.env` file (in .gitignore)
+- Rotate tokens regularly
+- Limit token permissions to minimum needed
+- Enable 2FA on GitHub account
 
-## 📊 Monitoring & Alerts
+## 📞 Need Help?
 
-The system provides real-time monitoring through:
+Refer to **WAR_DASHBOARD_SETUP.md** for:
+- Detailed implementation guide
+- Troubleshooting section
+- Template examples
+- Automation options
+- Team collaboration guidelines
 
-- **Dashboard**: Web-based monitoring interface (port 8080)
-- **Syslog**: Integration with system logging
-- **Email Alerts**: Critical security events
-- **Webhook**: Integration with external systems
+## 🚀 Next Steps After Setup
 
-## 🧪 Testing
+1. Visit your project dashboard
+2. Review the setup guide
+3. Add real conflict/event data
+4. Configure team permissions
+5. Set up automated updates
+6. Start tracking global events
 
-Run the test suite:
+## 📄 License
 
-```bash
-# Run all tests
-python3 -m pytest tests/
-
-# Run specific test
-python3 -m pytest tests/test_can_security.py
-
-# Run with coverage
-python3 -m pytest --cov=src tests/
-```
-
-Simulate attacks for testing:
-
-```bash
-# Simulate CAN injection attack
-sudo ./scripts/simulate_attack.sh injection
-
-# Simulate replay attack
-sudo ./scripts/simulate_attack.sh replay
-```
-
-## 📚 Documentation
-
-- [Architecture Overview](docs/ARCHITECTURE.md)
-- [Comprehensive Security Guide](docs/SECURITY_GUIDE.md)
-- [API Reference](docs/API_REFERENCE.md)
-- [Contributing Guidelines](CONTRIBUTING.md)
-
-## 🤝 Contributing
-
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## ⚠️ Disclaimer
-
-This software is provided for **educational and research purposes only**. It is intended to help developers understand and implement automotive cybersecurity best practices. 
-
-**Important:**
-- Always test in controlled environments
-- Comply with local laws and regulations
-- Do not use on production vehicles without proper authorization
-- Follow ISO/SAE 21434 and UNECE WP.29 guidelines
-- Unauthorized vehicle access is illegal
-
-## 🌟 Compliance
-
-This project implements security measures aligned with:
-
-- **ISO/SAE 21434**: Cybersecurity Engineering
-- **ISO 26262**: Functional Safety
-- **UNECE WP.29**: Vehicle Cybersecurity Regulation (R155, R156)
-- **AUTOSAR**: Security standards and crypto stack
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/yourusername/automotive-cybersecurity/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/automotive-cybersecurity/discussions)
-- **Security Vulnerabilities**: Please report privately to security@yourdomain.com
-
-## 🙏 Acknowledgments
-
-- AUTOSAR Consortium for security specifications
-- ISO/SAE for cybersecurity standards
-- Linux Foundation for SocketCAN
-- Open source automotive security community
-
-## 📈 Roadmap
-
-- [ ] Add support for SOME/IP protocol
-- [ ] Implement Ethernet AVB security
-- [ ] Add AUTOSAR Adaptive platform support
-- [ ] Enhance ML models with deep learning
-- [ ] Add blockchain-based update verification
-- [ ] Implement zero-trust architecture
+MIT License - See LICENSE file for details
 
 ---
 
-**⭐ If you find this project helpful, please consider giving it a star!**
+**Version**: 1.0  
+**Last Updated**: June 25, 2026  
+**Maintainer**: ARUSHAMMU262007
 
-Made with ❤️ for automotive cybersecurity
+**Repository**: https://github.com/ARUSHAMMU262007/automotive-cybersecurity
