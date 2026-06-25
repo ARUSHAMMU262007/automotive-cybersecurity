@@ -128,14 +128,3 @@ Refer to **WAR_DASHBOARD_SETUP.md** for:
 5. Set up automated updates
 6. Start tracking global events
 
-## 📄 License
-
-MIT License - See LICENSE file for details
-
----
-
-**Version**: 1.0  
-**Last Updated**: June 25, 2026  
-**Maintainer**: ARUSHAMMU262007
-
-**Repository**: https://github.com/ARUSHAMMU262007/automotive-cybersecurity
