@@ -1,0 +1,172 @@
+{
+  "project": {
+    "name": "War & Current Affairs Dashboard",
+    "description": "Comprehensive tracking system for global conflicts, geopolitical developments, and current affairs with real-time data integration",
+    "sections": {
+      "active_conflicts": {
+        "title": "Active Conflicts & War Zones",
+        "fields": [
+          "conflict_name",
+          "location",
+          "start_date",
+          "parties_involved",
+          "status",
+          "casualty_count",
+          "displaced_persons",
+          "international_involvement"
+        ]
+      },
+      "military_operations": {
+        "title": "Military Operations & Tactics",
+        "fields": [
+          "operation_name",
+          "date",
+          "location",
+          "combatants",
+          "outcome",
+          "casualties",
+          "equipment_involved",
+          "strategic_significance"
+        ]
+      },
+      "humanitarian_crisis": {
+        "title": "Humanitarian Crisis Data",
+        "fields": [
+          "crisis_location",
+          "type_of_crisis",
+          "affected_population",
+          "severity_level",
+          "aid_organizations_involved",
+          "funding_status",
+          "urgent_needs",
+          "last_update"
+        ]
+      },
+      "geopolitical_developments": {
+        "title": "Geopolitical Developments",
+        "fields": [
+          "event_title",
+          "date",
+          "countries_involved",
+          "type_of_event",
+          "implications",
+          "international_response",
+          "sources",
+          "follow_up_actions"
+        ]
+      },
+      "peace_negotiations": {
+        "title": "Peace Negotiations & Treaties",
+        "fields": [
+          "negotiation_name",
+          "date_started",
+          "parties_involved",
+          "location",
+          "progress_status",
+          "key_points_discussed",
+          "international_mediators",
+          "expected_outcome"
+        ]
+      },
+      "sanctions_and_response": {
+        "title": "International Response & Sanctions",
+        "fields": [
+          "sanction_type",
+          "imposing_country_org",
+          "targeted_entity",
+          "date_imposed",
+          "reason",
+          "impact_assessment",
+          "duration",
+          "exemptions"
+        ]
+      },
+      "real_time_affairs": {
+        "title": "Real-time Current Affairs",
+        "fields": [
+          "news_title",
+          "date",
+          "location",
+          "source",
+          "credibility_rating",
+          "impact_level",
+          "related_conflicts",
+          "follow_up_required"
+        ]
+      },
+      "statistics_and_data": {
+        "title": "Data & Statistics",
+        "fields": [
+          "metric_name",
+          "value",
+          "date_recorded",
+          "source",
+          "confidence_level",
+          "trend",
+          "comparison_period",
+          "notes"
+        ]
+      }
+    },
+    "data_sources": [
+      "UN Official Reports",
+      "Red Cross/Red Crescent",
+      "Reuters",
+      "Associated Press",
+      "BBC News",
+      "Government Official Statements",
+      "International Criminal Court",
+      "Human Rights Watch",
+      "OCHA (UN Office for Coordination of Humanitarian Affairs)",
+      "SIPRI (Stockholm International Peace Research Institute)"
+    ],
+    "accuracy_standards": {
+      "source_verification": "All information must be cross-referenced with at least 2 reliable sources",
+      "timestamps": "Every update must include verification timestamp",
+      "distinction": "Clearly separate confirmed events from unconfirmed reports",
+      "attribution": "Always cite sources for statistics and claims",
+      "update_frequency": "Critical events updated within 24 hours of verification"
+    }
+  },
+  "api_endpoints": {
+    "create_project": {
+      "method": "POST",
+      "endpoint": "/repos/ARUSHAMMU262007/automotive-cybersecurity/projects",
+      "headers": {
+        "Accept": "application/vnd.github.inertia-preview+json",
+        "Authorization": "Bearer YOUR_GITHUB_TOKEN",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "War & Current Affairs Dashboard",
+        "body": "Comprehensive tracking system for global conflicts, geopolitical developments, and current affairs with real-time data integration. Features: Active Conflicts, Military Operations, Humanitarian Crisis, Geopolitical Developments, Peace Negotiations, International Response & Sanctions, Real-time Current Affairs, and Statistical Data."
+      }
+    },
+    "add_cards": {
+      "method": "POST",
+      "endpoint": "/projects/{project_id}/columns",
+      "headers": {
+        "Accept": "application/vnd.github.inertia-preview+json",
+        "Authorization": "Bearer YOUR_GITHUB_TOKEN"
+      }
+    },
+    "create_issue": {
+      "method": "POST",
+      "endpoint": "/repos/ARUSHAMMU262007/automotive-cybersecurity/issues",
+      "headers": {
+        "Authorization": "Bearer YOUR_GITHUB_TOKEN"
+      }
+    }
+  },
+  "implementation_guide": {
+    "step_1": "Generate GitHub Personal Access Token with 'repo' and 'project' scopes",
+    "step_2": "Execute POST request to create project using the endpoint above",
+    "step_3": "Create columns for each section (Active Conflicts, Military Ops, etc.)",
+    "step_4": "Add issues/cards for each tracked event or conflict",
+    "step_5": "Set up automated webhooks for real-time updates",
+    "step_6": "Configure data validation rules for accuracy",
+    "step_7": "Enable team collaboration with proper permissions",
+    "step_8": "Set up notifications for critical updates"
+  },
+  "example_curl_command": "curl -X POST -H \"Accept: application/vnd.github.inertia-preview+json\" -H \"Authorization: Bearer YOUR_GITHUB_TOKEN\" -H \"Content-Type: application/json\" https://api.github.com/repos/ARUSHAMMU262007/automotive-cybersecurity/projects -d '{\"name\":\"War & Current Affairs Dashboard\",\"body\":\"Comprehensive tracking system for global conflicts, geopolitical developments, and current affairs with real-time data integration\"}'"
+}
